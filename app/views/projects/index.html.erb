@@ -1,0 +1,17 @@
+<%= link_to 'New project', new_project_path %>
+<div id="projects_show" class="">
+  
+  <% for project in @projects %>
+    <div  class="project_box">
+      <div id="" >
+			<%= image_tag project.main_image.url(:small) %>
+		  
+      </div>
+      <div class="project_box_footer">
+        <h4><%= link_to project.name , project %></h4>
+      </div>
+    </div>
+  <% end %>
+</div>
+<%= will_paginate @projects , :class=>"apple_pagination span-24" %>
+

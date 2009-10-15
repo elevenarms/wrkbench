@@ -1,0 +1,10 @@
+--- 
+javascripts: 
+- base: 
+  - jquery
+  - jquery-ui
+  - application
+stylesheets: 
+- base:
+  - base
+

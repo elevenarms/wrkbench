@@ -1,0 +1,25 @@
+<div class="column form">
+
+<% form_tag session_path do %>
+<fieldset>
+  <legend>Login</legend>
+  <p>
+    <%= label_tag 'login', 'Username' %><br/>
+    <%= text_field_tag 'login', @login, :class => 'text' %>
+  </p>
+  <p>
+    <%= label_tag 'password' %><br/>
+    <%= password_field_tag 'password', nil, :class => 'text' %>
+  </p>
+  <p>
+    <%= label_tag 'remember_me', 'Remember me' %>
+    <%= check_box_tag 'remember_me', '1', @remember_me %>
+  </p>
+</fieldset>
+
+<div class="buttons">
+  <%= submit_tag 'Login' %>
+  <%= link_to 'Forgotten Password', forgot_password_path %>
+</div>
+<% end -%>
+</div>

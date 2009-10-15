@@ -1,0 +1,288 @@
+/* === FLASH MESSAGES === */
+div#flash-notice {
+	
+}
+
+div#flash-warning {
+	
+}
+
+div#flash-error {
+	
+}
+
+/* === ERROR MESSAGES === */
+div#errorExplanation {
+	
+}
+
+div#errorExplanation h2 {
+	
+}
+
+div#errorExplanation p {
+	
+}
+
+div#errorExplanation ul {
+	
+}
+
+div#errorExplanation ul li {
+	
+}
+/* === HEADER === */
+#header{
+	border-top:8px solid black;
+	
+	border-bottom:10px solid black;
+	border-color:black;
+	padding-bottom:45px;
+	margin-bottom:10px;
+}
+#header-top{
+    height:45px;
+    background: #ffffff none repeat scroll 0 0;
+
+}
+#header-top h1{
+    color:black;
+    font-weight:bold;
+    padding:5px;
+
+}
+#header-top span{
+    color:black;
+    font-size:12px;
+    font-weight:bold;
+    padding:10px;
+    
+    text-align:center;
+}
+#header-top a{
+	text-decoration:none;
+}
+#global-actions{
+    margin-top:12px;
+	font-weight:bold;
+
+}
+
+#login-links{
+	font-weight:bold;
+	margin-top:12px;
+}
+#profile-block{
+
+float:right;
+height:45px;
+width:150px;
+color:black;
+}
+#profile-block img{
+	float:right;
+	background-color:black;
+	float:right;
+	height:100%;
+	width:50px;
+}
+
+#logout-link{
+	position:absolute;
+	right:145px;
+	top:18px;
+}
+#profile-link{
+	position:absolute;
+	right:145px;
+	top:1px;
+	
+}
+#header-middle{
+
+    height:1%;
+    font-size:14px;
+    color:#3b5d14;
+    background:#b2d281;
+    font-weight:bold;
+    padding:6px;
+    overflow:auto;
+
+
+}
+#topbar{
+    font-size:14px;
+    color:#091840;
+    background:#000000;
+    font-weight:bold;
+    overflow:auto;
+    height:39px;
+    clear:both;}
+#topbar a{
+    color:#ffffff;
+    text-decoration:none;
+    margin:0 10px;
+    height:23px;
+    line-height:23px;
+    float:left;
+    display:block;}	
+
+/* === TABS === */
+
+
+.tab{
+	list-style-type:none;
+	float:left;
+}
+.tab_active{
+	color:#53DAFF;
+    float:left;
+    line-height:23px;
+	list-style-type:none;
+	display:block;
+}
+.tab_active span{
+	padding:10px;
+	background:#636363 none repeat scroll 0 0;
+}
+.bar{
+	background-color:#000000;
+	height:6px;
+	margin-top:15px;
+}
+
+a.active span{ background:url(/images/tb_span.png) left top no-repeat; height:23px; display:block; padding-left:10px;}
+#dashboard-projects-c{
+    padding-top:20px;
+
+}
+#tab-bar{
+    padding-bottom:8px;
+    padding-top:8px;
+}
+
+#tablist li{
+    margin-right:15px;
+    float:left;
+    list-style-type:none;
+}
+#tablist li a:hover {
+    text-decoration: none;
+}
+
+/* === PROJECT GRID === */
+#projects_show{
+	width:900px;
+	margin:0 auto;
+	
+}
+.project_box{
+	width:150px;
+	height:150px;
+	padding:10px;
+	float:left;
+	
+}
+
+.project_box_footer{
+	height:35px;
+	width:100%;
+	background: black;
+	position:relative;
+	bottom:40px;
+	color:white;
+}
+.project_box_footer h4{
+	padding-left:4px;
+	color:white;
+}
+.project_box_footer a{
+	color:white;
+	text-decoration:none;
+}
+/* === CONTEXT MENU === */
+
+#context-menu{
+    font-size:11px;
+    color:#3b5d14;
+    background:#636363;
+    font-weight:bold;
+    padding:9px;
+    overflow:auto;
+    height:1%;
+    clear:both;
+
+}
+#context-menu li{
+    margin-top:8px;
+    padding-bottom:10px;
+    margin-right:15px;
+    float:left;
+    list-style-type:none;
+}
+#context-menu a span{
+   
+    height:23px;
+    display:block;
+    padding-left:10px;
+}
+#context-menu a{
+    color:#53DAFF;
+    text-decoration:none;
+    margin:0 7px;
+    padding-right:10px;
+    height:23px;
+    line-height:23px;
+    display:block;
+    float:left;
+
+}
+#context-menu span:hover{
+    
+    color:#ffffff;
+    
+	
+}
+#context-menu a:hover{
+    color:#53DAFF;
+}
+
+/* === PAGINATION === */
+
+.apple_pagination {
+    background: #F1F1F1;
+    border: 1px solid #E5E5E5;
+    text-align: center;
+    padding: 1em; }
+.apple_pagination a, .apple_pagination span {
+    padding: .2em .3em; }
+.apple_pagination span.disabled {
+    color: #AAA; }
+.apple_pagination span.current {
+    font-weight: bold;
+    background: transparent url(/images/apple-circle.gif) no-repeat 40% 40%; }
+.apple_pagination a {
+    text-decoration: none;
+    color: black; }
+.apple_pagination a:hover, .apple_pagination a:focus {
+    text-decoration: underline; }
+
+/* === FORMS === */
+.form{
+	margin:20px 0 200px 0;
+}
+div.fieldWithErrors {
+	display: inline;
+}
+
+div.fieldWithErrors label {
+	
+}
+
+div.fieldWithErrors input, div.fieldWithErrors select, 
+div.fieldWithErrors textarea
+{
+	border-color: #f00;
+	color: #f00;
+	background: #ffd5d5;
+}

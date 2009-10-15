@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<title><%= @page_title || APP_CONFIG[:site_name] %></title>
+		<meta http-equiv="content-type" content="text/xhtml; charset=utf-8" />
+		<meta http-equiv="imagetoolbar" content="no" />
+		<meta name="distribution" content="all" />
+		<meta name="robots" content="all" />	
+		<meta name="resource-type" content="document" />
+		<meta name="MSSmartTagsPreventParsing" content="true" />
+		<link rel="stylesheet" href="/stylesheets/blueprint/screen.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="/stylesheets/blueprint/print.css" type="text/css" media="print"> 
+    <!--[if IE]>
+      <link rel="stylesheet" href="/stylesheets/blueprint/ie.css" type="text/css" media="screen, projection">
+    <![endif]-->
+		<%= stylesheet_link_merged :base %>
+		<%= javascript_include_merged :base %>
+	</head>
+	<body>
+		<div class="container">
+			<div id="header">
+			  <div id="header-top" class="span-24">
+		        <div class="column span-3">
+		          	<%= link_to '<h1>UnPtnt</h1>', '/'%>
+		        </div>
+		        <div id="global-actions"class="column span-6 prepend-2">
+		          <%= link_to '<span>Projects</span>', projects_path %>
+		          <% if logged_in? then %>
+		            <%= link_to '<span>Dashboard</span>', dashboard_path %>
+		          <% end %>
+		          <%= link_to '<span>Blog</span>', 'http://blog.unptnt.com' %>
+		        </div>
+		 		<% if logged_in? then %>
+		            <% uploaded_image = current_user.home_page_image %>
+		            <div id="profile-block">
+					  <% unless uploaded_image.nil?  then %>
+					                <%= image_tag uploaded_image.public_filename,:width=>'45' %>
+					              <% else%>
+					                <img src="/images/nouserimg.png" width="45">
+					              <% end %>
+								<%= link_to '<span id="profile-link">'+ current_user.name+ '</span>', current_user %>
+							  	<%= link_to '<span id="logout-link">(logout)</span>', logout_path %>
+					   </div>
+					<% else %>
+			     <div id="login-links" class="column span-3 prepend-9">
+
+						<%= link_to '<span>login</span>', login_path %>
+			            <%= link_to '<span>signup</span>', signup_path %>
+
+			        </div>
+			 <% end %>
+		
+			</div>
+					 <div id="topbar" class="span-24">
+					          <div id="tab-bar" class="column">
+					            <% tabs do |tab| %>
+					              <%= tab.project "Overview"%>
+					              <%= tab.people "People"%>
+
+					              <%= tab.materials "Materials" %>
+					            <% end %>
+					          </div>
+					        </div>
+					        <div id="header-bottom" class="span-24">
+					          <div id="context-menu">
+					            <%=render_context_menu(@context_menu)%>
+					          </div>
+					        </div>
+			</div>
+			<div id="content">
+			  <%- unless flash_messages.blank? -%>
+			    <div class="notice">
+  				<%= flash_messages %>
+  				</div>
+				<%- end -%>
+				<%= yield :layout %>
+			</div>
+		</div>
+	</body>
+</html>
