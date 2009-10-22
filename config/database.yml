@@ -6,12 +6,11 @@ development:
   # timeout: 5000
 
   # Mysql Settings
-  adapter: mysql
-  encoding: utf8
-  database: bort_development
-  username: root
-  password:
-  # pool: 5
+  # Sqlite Settings
+  adapter: sqlite3
+  database: db/development.sqlite3
+  pool: 5
+  timeout: 5000
   
 test:
   # Sqlite Settings
